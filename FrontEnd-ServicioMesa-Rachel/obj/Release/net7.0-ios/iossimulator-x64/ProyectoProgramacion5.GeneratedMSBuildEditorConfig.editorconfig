@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoProgramacion5
+build_property.ProjectDir = C:\Users\vilma\Documents\U\ProyectoProgramacion5 - copia\
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/CreateOrderView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.CreateOrderView.xaml
+build_metadata.AdditionalFiles.TargetPath = CreateOrderView.xaml
+build_metadata.AdditionalFiles.RelativePath = CreateOrderView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/EditOrdernView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.EditOrdernView.xaml
+build_metadata.AdditionalFiles.TargetPath = EditOrdernView.xaml
+build_metadata.AdditionalFiles.RelativePath = EditOrdernView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/LoginView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.LoginView.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginView.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/PagarOrdenView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.PagarOrdenView.xaml
+build_metadata.AdditionalFiles.TargetPath = PagarOrdenView.xaml
+build_metadata.AdditionalFiles.RelativePath = PagarOrdenView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/ProductAddView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.ProductAddView.xaml
+build_metadata.AdditionalFiles.TargetPath = ProductAddView.xaml
+build_metadata.AdditionalFiles.RelativePath = ProductAddView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/ProductEditView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.ProductEditView.xaml
+build_metadata.AdditionalFiles.TargetPath = ProductEditView.xaml
+build_metadata.AdditionalFiles.RelativePath = ProductEditView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/ProductsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.ProductsView.xaml
+build_metadata.AdditionalFiles.TargetPath = ProductsView.xaml
+build_metadata.AdditionalFiles.RelativePath = ProductsView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/UserEditView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.UserEditView.xaml
+build_metadata.AdditionalFiles.TargetPath = UserEditView.xaml
+build_metadata.AdditionalFiles.RelativePath = UserEditView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/UserRegisterView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.UserRegisterView.xaml
+build_metadata.AdditionalFiles.TargetPath = UserRegisterView.xaml
+build_metadata.AdditionalFiles.RelativePath = UserRegisterView.xaml
+
+[C:/Users/vilma/Documents/U/ProyectoProgramacion5 - copia/UsersView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoProgramacion5.UsersView.xaml
+build_metadata.AdditionalFiles.TargetPath = UsersView.xaml
+build_metadata.AdditionalFiles.RelativePath = UsersView.xaml

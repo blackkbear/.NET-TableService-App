@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ProyectoProgramacion5.Entities"
+             xmlns:ViewModel="clr-namespace:ProyectoProgramacion5.ViewModel"
+             x:DataType="ViewModel:RespListaProductosOrdenVM"
+             x:Class="ProyectoProgramacion5.EditOrdernView"
+             Title="EditOrdernView"
+             BackgroundColor="#00235B">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".05*"/>
+            <RowDefinition Height=".95*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Button Text="Actualizar Orden"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                FontSize="25"
+                x:Name="btnActualizarOrden"
+                Clicked="btnActualizarOrden_Clicked"
+                BackgroundColor="#DD7373"
+                TextColor="#D1D1D1"
+                Padding="1,1,1,1"/>
+        <CollectionView Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding listaProductos}"
+                        Margin="2,2,2,2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:RespListaProductos">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems x:Name="MySwipe" 
+                                        SwipeBehaviorOnInvoked="RemainOpen">
+                                <SwipeItem  Text="+"
+                                            x:Name="btnPlus"
+                                            Clicked="btnPlus_Clicked"
+                                            BackgroundColor="LightCoral"/>
+                                <SwipeItem  Text="{Binding CantidadEnOrden}"
+                                            x:Name="lblQty"
+                                            BackgroundColor="White"/>
+                                <SwipeItem  Text="-"                                               
+                                            x:Name="btnMinus"
+                                            Clicked="btnMinus_Clicked"
+                                            BackgroundColor="LightCoral"/>
+
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="3,1,1,1"
+                                  Grid.ColumnSpan="2">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".5*"/>
+                                <ColumnDefinition Width=".5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label  Grid.Column="0"
+                                    Grid.Row="0"
+                                    Text="{Binding IdProducto}"
+                                    FontSize="25"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="#DD7373"
+                                    TextColor="#D1D1D1"/>
+                            <Label  Grid.Column="1"
+                                    Grid.Row="0"
+                                    Text="{Binding CantidadEnOrden}"
+                                    FontSize="25"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="#DD7373"
+                                    TextColor="#D1D1D1"/>
+                            <Label  Grid.Column="0"
+                                    Grid.Row="1"
+                                    Text="{Binding Nombre}"
+                                    FontSize="25"
+                                    BackgroundColor="#DD7373"
+                                    TextColor="#D1D1D1"/>
+                            <Label  Grid.Column="1"
+                                    Grid.Row="1"
+                                    Text="{Binding Precio}"
+                                    FontSize="25"
+                                    BackgroundColor="#DD7373"
+                                    TextColor="#D1D1D1"/>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

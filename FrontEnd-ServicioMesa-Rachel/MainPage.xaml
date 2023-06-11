@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ViewModel ="clr-namespace:ProyectoProgramacion5.ViewModel"
+            xmlns:Model="clr-namespace:ProyectoProgramacion5.Entities"
+            x:DataType="ViewModel:RespListaOrdenesVM"
+            x:Class="ProyectoProgramacion5.MainPage"
+            Title="Restaurante"
+            BackgroundColor="#2196F3">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Inicio"
+                     BackgroundColor="#C7BAEE">
+            <StackLayout BackgroundColor="#C7BAEE">
+                <Label Text="."
+                       FontSize="20"
+                       x:Name="lblActiveUser"
+                        HorizontalOptions="Fill"
+                      
+                        TextColor="#582cd4"
+                       HeightRequest="50"
+                        BackgroundColor="Transparent"/>
+                <Button Text="USUARIOS"
+                        x:Name="btnUsuarios"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Fill"
+                        TextColor="#582cd4"
+                       HeightRequest="50"
+                        BackgroundColor="Transparent"
+                        Clicked="Button_Clicked"/>
+                <Button Text="PRODUCTOS"
+                        FontSize="25"
+                        x:Name="btnProductos"
+                        FontAttributes="Bold"
+                        Clicked="btnProductos_Clicked"
+                        HorizontalOptions="Fill"
+                        TextColor="#582cd4"
+                        HeightRequest="50"
+                        BackgroundColor="Transparent"/>
+                <Button Text="ACERCA DE"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        x:Name="btnAbout"
+                        Clicked="btnAbout_Clicked"
+                        HorizontalOptions="Fill"
+                        TextColor="#582cd4"
+                        HeightRequest="50"
+                        BackgroundColor="Transparent"/>
+            </StackLayout>
+
+
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <ContentPage BackgroundColor="White">
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width=".5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            x:Name="btnNuevaOrden"
+                            FontSize="25"
+                            Clicked="btnNuevaOrden_Clicked"
+                            Text="Nueva Orden" 
+                            BackgroundColor="#582cd4"
+                            TextColor="#D1D1D1"
+                            Margin="5,5,5,5"/>                      
+                </Grid>
+                <CollectionView Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding listaOrdenes}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="Model:RespListaOrdenes">
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems x:Name="MySwipe">
+                                        <SwipeItem  Text="Editar"
+                                            x:Name="btnEdit"
+                                                    Clicked="btnEdit_Clicked"
+                                            BackgroundColor="#EAD94C" />
+                                        <SwipeItem  Text="Pagar"
+                                            x:Name="btnPagar"
+                                                    Clicked="btnPagar_Clicked"
+                                            BackgroundColor="green"/>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Grid Padding="3,1,1,1">
+                                    <Grid.RowDefinitions >
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".5*"/>
+                                        <ColumnDefinition Width=".5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label  Text="{Binding IdOrden}"
+                                            FontAttributes="Bold"
+                                            FontSize="25"
+                                            BackgroundColor="#DD7373"
+                                            TextColor="#D1D1D1"
+                                            Grid.Column="0"/>
+                                    <Label  Text="{Binding NombreMesa}"
+                                            FontSize="25"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="#DD7373"
+                                            TextColor="#D1D1D1"
+                                            Grid.Column="1"/>
+                                </Grid>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Detail>
+
+
+</FlyoutPage>

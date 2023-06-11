@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgramacion5.UserRegisterView"
+             Title="UserRegisterView"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0"
+               Text="Crear Usuario" 
+               Grid.ColumnSpan="2"
+               FontSize="25"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               HorizontalOptions="Center" 
+               HorizontalTextAlignment="Center"/>
+        <Entry x:Name="txtNombre"
+               Grid.Row="1"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               FontSize="25"
+               
+               VerticalOptions="Center"
+               Placeholder="Nombre"
+               Margin="5,5,5,5"/>
+        <Entry x:Name="txtApellido"
+               Grid.Row="2"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               FontSize="25"              
+        
+               VerticalOptions="Center"
+               Placeholder="Apellido"
+               Margin="5,5,5,5"/>
+        <Entry x:Name="txtCorreo"
+               Grid.Row="3"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               FontSize="25"
+               
+               VerticalOptions="Center"
+               Placeholder="Correo"
+               Margin="5,5,5,5"/>
+        <Entry x:Name="txtTelefono"
+               Grid.Row="4"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               FontSize="25"
+               
+               VerticalOptions="Center"
+               Placeholder="Telefono"
+               Margin="5,5,5,5"
+               Keyboard="Numeric"/>
+        <Entry x:Name="txtCedula"
+               Grid.Row="5"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               FontSize="25"
+               
+               VerticalOptions="Center"
+               Placeholder="Cédula"
+               Margin="5,5,5,5"
+               Keyboard="Numeric"/>
+        <Entry x:Name="txtPassWord"
+               Grid.Row="6"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#C7BAEE"
+               TextColor="Black"
+               FontSize="25"
+               
+               VerticalOptions="Center"
+               Placeholder="Contraseña"
+               Margin="5,5,5,5"
+               IsPassword="True"/>
+        <StackLayout RadioButtonGroup.GroupName="Roles"
+                     BackgroundColor="#582cd4"
+                     Grid.Row="7"  
+                     Grid.ColumnSpan="2"
+                     Margin="5,5,5,5"
+                     Orientation="Horizontal">
+            <RadioButton x:Name="rbAdmin"
+                         IsChecked="true"
+                         Content="admin"
+                         FontSize="25"
+                         TextColor="#D1D1D1"/>
+            <RadioButton x:Name="rbMeseroCajero"
+                         IsChecked="False"
+                         FontSize="25"
+                         Content="Cajero"
+                         TextColor="#D1D1D1"/>
+        </StackLayout>
+        <Button Grid.Row="8"
+                Grid.Column="0"
+                x:Name="btnCancel" 
+                Text="Cancelar" 
+                TextColor="#D1D1D1"
+                Clicked="btnCancel_Clicked"
+                BackgroundColor="#582cd4"
+                FontSize="25"
+                Margin="5,5,5,5"/>
+        <Button Grid.Row="9"
+                Grid.Column="1"
+                x:Name="btnSave" 
+                Text="Registrarse" 
+                TextColor="#D1D1D1"
+                Clicked="btnSave_Clicked"
+                BackgroundColor="#582cd4"
+                FontSize="25"
+                Margin="5,5,5,5"/>
+    </Grid>
+</ContentPage>

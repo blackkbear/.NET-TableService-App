@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ProyectoProgramacion5.Entities"
+             xmlns:ViewModel="clr-namespace:ProyectoProgramacion5.ViewModel"
+             x:DataType="ViewModel:CrearOrdenesVM"
+             x:Class="ProyectoProgramacion5.CreateOrderView"
+             Title="CreateOrderView"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+
+       
+        <Button Text="Crear Orden"
+                Grid.Row="0"
+                Grid.Column="1"
+                FontSize="25"
+                x:Name="btnCrearOrden"
+                Clicked="btnCrearOrden_Clicked"
+                BackgroundColor="#582cd4"
+                TextColor="#D1D1D1"
+                Padding="1,1,1,1"/>
+        <Picker x:Name="picker"
+                BackgroundColor="#2196F3"
+                TextColor="#D1D1D1"
+                FontSize="25"
+                Grid.Row="0"
+                Grid.Column="0"
+                Title="Mesas"
+                ItemsSource="{Binding listaMesas}"
+                SelectedIndexChanged="picker_SelectedIndexChanged"
+                ItemDisplayBinding="{Binding NombreMesa}">
+            
+        </Picker>
+        <CollectionView Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding listaProductos}"
+                        Margin="2,2,2,2"
+                        x:Name="cvListaProd">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:RespListaProductos">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems x:Name="MySwipe" 
+                                        SwipeBehaviorOnInvoked="RemainOpen">
+                                <SwipeItem  Text="+"
+                                            x:Name="btnPlus"
+                                            Clicked="btnPlus_Clicked"
+                                            BackgroundColor="#2196F3"/>
+                                <SwipeItem  Text="{Binding CantidadEnOrden}"
+                                            x:Name="lblQty"
+                                            BackgroundColor="White"/>
+                                <SwipeItem  Text="-"                                               
+                                            x:Name="btnMinus"
+                                            Clicked="btnMinus_Clicked"
+                                            BackgroundColor="#2196F3"/>
+                                
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                            <Grid Padding="3,1,1,1"
+                                  Grid.ColumnSpan="2">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".5*"/>
+                                <ColumnDefinition Width=".5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label  Grid.Column="0"
+                                    Grid.Row="0"
+                                    Text="{Binding IdProducto}"
+                                    FontSize="25"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="#C7BAEE"
+                                    TextColor="Black"/>
+                            <Label  Grid.Column="1"
+                                    Grid.Row="0"
+                                    Text="{Binding Descripcion}"
+                                    FontSize="25"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="#C7BAEE"
+                                    TextColor="Black"/>
+                            <Label  Grid.Column="0"
+                                    Grid.Row="1"
+                                    Text="{Binding Nombre}"
+                                    FontSize="25"
+                                    BackgroundColor="#C7BAEE"
+                                    TextColor="Black"/>
+                            <Label  Grid.Column="1"
+                                    Grid.Row="1"
+                                    Text="{Binding Precio}"
+                                    FontSize="25"
+                                    BackgroundColor="#C7BAEE"
+                                    TextColor="Black"/>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+        
+</ContentPage>

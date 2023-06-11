@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoProgramacion5.LoginView"
+             Title="LoginView"
+             BackgroundColor="White">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height=".3*"/>
+
+        </Grid.RowDefinitions>
+        
+        <Image Source="logo.png"
+               Grid.Row="0"
+               VerticalOptions="Center"/>
+        <Entry x:Name="txtUserName"
+               Grid.Row="1"    
+               FontSize="40"
+               BackgroundColor="#582cd4"
+               TextColor="#D1D1D1"
+               VerticalOptions="Center"
+               Placeholder="Correo"
+               Margin="5,5,5,5"
+               />
+        <Entry x:Name="txtPassWord"
+               Grid.Row="2"
+               FontSize="40"
+               BackgroundColor="#582cd4"
+               TextColor="#D1D1D1"
+               VerticalOptions="Center"
+               Placeholder="Contraseña"
+               Margin="5,5,5,5"
+               IsPassword="True"/>
+        <Button Grid.Row="3"
+                x:Name="btnLogin" 
+                FontSize="40"
+                Clicked="btnLogin_Clicked"
+                Text="Iniciar sesión" 
+                BackgroundColor="#582cd4"
+                TextColor="#D1D1D1"
+                Margin="5,5,5,5"/>
+
+        <Label Text="Servicio de Mesa" VerticalOptions="Center" FontAttributes="Bold" FontSize="Large" Margin="50,0" />
+    </Grid>
+    
+</ContentPage>

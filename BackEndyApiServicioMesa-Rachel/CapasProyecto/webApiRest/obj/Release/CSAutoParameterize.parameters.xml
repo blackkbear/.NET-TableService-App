@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Progra5ConnectionString-Web.config Connection String" description="Progra5ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=serveremanuel.database.windows.net;Initial Catalog=Progra5;Persist Security Info=True;User ID=adminprogra5;Password=proyectoV2023!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="F:\\Desktop\\proyectoProgra5\\CapasProyecto\\webApiRest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Progra5ConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="Progra5ConnectionString1-Web.config Connection String" description="Progra5ConnectionString1 Connection String used in web.config by the application to access the database." defaultValue="Data Source=serveremanuel.database.windows.net;Initial Catalog=Progra5;Persist Security Info=True;User ID=adminprogra5;Password=proyectoV2023!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="F:\\Desktop\\proyectoProgra5\\CapasProyecto\\webApiRest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Progra5ConnectionString1']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Progra5" Class="conexionLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Function Name="dbo.PA_ActualizarOrden" Method="PA_ActualizarOrden">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idMesa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_ActualizarOrdenResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_ActualizarOrdenDetalle" Method="PA_ActualizarOrdenDetalle">
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_ActualizarOrdenDetalleResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_ActualizarUsuario" Method="PA_ActualizarUsuario">
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombrePersona" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="apellido" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="telefono" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cedula" Type="System.Int32" DbType="Int" />
+    <Parameter Name="contrasena" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="idTipoUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_ActualizarUsuarioResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_CancelarOrden" Method="PA_CancelarOrden">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_CancelarOrdenResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_CobrarOrden" Method="PA_CobrarOrden">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_CobrarOrdenResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_CrearOrden" Method="PA_CrearOrden">
+    <Parameter Name="idMesa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_CrearOrdenResult">
+      <Column Name="OrderID" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_EliminarOrden" Method="PA_EliminarOrden">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_EliminarOrdenResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_EliminarOrdenDetalle" Method="PA_EliminarOrdenDetalle">
+    <Parameter Name="idDetalleOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_EliminarOrdenDetalleResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_EliminarUsuario" Method="PA_EliminarUsuario">
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_EliminarUsuarioResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_ListarUsuario" Method="PA_ListarUsuario">
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_ListarUsuarioResult">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Persona_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombrePersona" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="contrasena" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="idTipoUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_ListaUsuarios" Method="PA_ListaUsuarios">
+    <ElementType Name="PA_ListaUsuariosResult">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Persona_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombrePersona" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="idTipoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoUsuario" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PA_RegistrarUsuario" Method="PA_RegistrarUsuario">
+    <Parameter Name="nombrePersona" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <Parameter Name="contrasena" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idTipoUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="PA_RegistrarUsuarioResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ActualizarCategoria" Method="SP_ActualizarCategoria">
+    <Parameter Name="idCategoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_ActualizarCategoriaResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ActualizarProductos" Method="SP_ActualizarProductos">
+    <Parameter Name="idProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="precio" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="idCategoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantidadProductos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_ActualizarProductosResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_AgregarCategoria" Method="SP_AgregarCategoria">
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_AgregarCategoriaResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_AgregarProductos" Method="SP_AgregarProductos">
+    <Parameter Name="precio" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="idCategoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_AgregarProductosResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CrearOrdenDetalle" Method="SP_CrearOrdenDetalle">
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_CrearOrdenDetalleResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_EliminarCategoria" Method="SP_EliminarCategoria">
+    <Parameter Name="idCateg" Type="System.Int32" DbType="Int" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_EliminarCategoriaResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_EliminarProductos" Method="SP_EliminarProductos">
+    <Parameter Name="idProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_EliminarProductosResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GenerarFacturaEfectivo" Method="SP_GenerarFacturaEfectivo">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombreCliente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numTelef" Type="System.Int32" DbType="Int" />
+    <Parameter Name="montoPago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_GenerarFacturaEfectivoResult">
+      <Column Name="idFactura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreCliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefonoCliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="montoFactura" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="montoPago" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="vueltoPago" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="numTarjeta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comprobSinpe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idMesa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idOrden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTipoPago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GenerarFacturaSinpe" Method="SP_GenerarFacturaSinpe">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombreCliente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numTelef" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_GenerarFacturaSinpeResult">
+      <Column Name="Advertencia" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GenerarFacturaTarjeta" Method="SP_GenerarFacturaTarjeta">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombreCliente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numTelef" Type="System.Int32" DbType="Int" />
+    <Parameter Name="numTarjeta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_GenerarFacturaTarjetaResult">
+      <Column Name="idFactura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreCliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefonoCliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="montoFactura" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="montoPago" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="vueltoPago" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="numTarjeta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comprobSinpe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idMesa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idOrden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTipoPago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListaProducto" Method="SP_ListaProducto">
+    <Parameter Name="idProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_ListaProductoResult">
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="idCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListaProductos" Method="SP_ListaProductos">
+    <ElementType Name="SP_ListaProductosResult">
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="idCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cantidadProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListaProductosOrden" Method="SP_ListaProductosOrden">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_ListaProductosOrdenResult">
+      <Column Name="idOrden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="idCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cantidad" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListarCategorias" Method="SP_ListarCategorias">
+    <ElementType Name="SP_ListarCategoriasResult">
+      <Column Name="idCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListarFacturas" Method="SP_ListarFacturas">
+    <ElementType Name="SP_ListarFacturasResult">
+      <Column Name="idFactura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreCliente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefonoCliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="montoFactura" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="montoPago" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="vueltoPago" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="numTarjeta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comprobSinpe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idMesa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idOrden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTipoPago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListarMesas" Method="SP_ListarMesas">
+    <ElementType Name="SP_ListarMesasResult">
+      <Column Name="idMesa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreMesa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListarOrden" Method="SP_ListarOrden">
+    <Parameter Name="idOrden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_ListarOrdenResult">
+      <Column Name="idOrden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="montoOrden" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ListarOrdenes" Method="SP_ListarOrdenes">
+    <ElementType Name="SP_ListarOrdenesResult">
+      <Column Name="idOrden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreMesa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ValidarLogin" Method="SP_ValidarLogin">
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="contrasena" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="SP_ValidarLoginResult">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idTipoUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombrePersona" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
